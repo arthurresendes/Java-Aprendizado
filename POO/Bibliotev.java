@@ -12,13 +12,12 @@ class Livro{
         }
 
         public String verInfo(){
-            return "Titulo " + titulo + " Autor: " + autor + " Disponivel: " + disponivel;
+            return "Titulo " + titulo + ", Autor: " + autor + ", Disponivel: " + disponivel;
         }
 
         public void setDisponivel(){
             disponivel = false;
         }
-
 }
 
 class Biblioteca{
@@ -38,15 +37,19 @@ class Biblioteca{
 
     public void emprestarLivro(Livro livro){
         if (listaLivros.contains(livro)) {
-            System.out.println("Livro emprestadi com sucesso!");
+            System.out.println("Livro emprestado com sucesso!");
             livro.setDisponivel();
         } else {
             System.out.println("Erro: Este livro não existe na biblioteca.");
         }
     }
     public void listarLivros(){
-        for(Livro l: listaLivros){
-            System.out.println("Livro: " + l.verInfo());
+        if(listaLivros.isEmpty()){
+            System.out.println("Sem livros na biblioteca!");
+        }else{
+            for(Livro l: listaLivros){
+                System.out.println("Livro: " + l.verInfo());
+            }
         }
     }
 }
@@ -55,11 +58,24 @@ public class Bibliotev {
     public static void main(String[] args) {
         Biblioteca biblio = new Biblioteca();
         Livro l1 = new Livro("Dom Casmurro", "Machado de Assis");
+        Livro l2 = new Livro("1984", "George Orwell");
+        Livro l3 = new Livro("O Pequeno Príncipe", "Antoine de Saint-Exupéry");
         
         biblio.adicionarLivro(l1);
         biblio.listarLivros();
-        
         biblio.emprestarLivro(l1);
+
+        biblio.adicionarLivro(l2);
+        biblio.listarLivros();
+        biblio.emprestarLivro(l2);
+
+        biblio.adicionarLivro(l3);
+        biblio.listarLivros();
+
+        biblio.removerLivro(l1);
+        biblio.removerLivro(l2);
+        biblio.removerLivro(l3);
+
         biblio.listarLivros();
     }
 }
