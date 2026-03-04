@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-class Livro{
+public class Bibliotev {
+
+    public static class Livro{
         private String titulo;
         private String autor;
         private Boolean disponivel;
@@ -18,43 +20,41 @@ class Livro{
         public void setDisponivel(){
             disponivel = false;
         }
-}
-
-class Biblioteca{
-    private ArrayList<Livro> listaLivros = new ArrayList<>();
-
-    public void adicionarLivro(Livro livro){
-        listaLivros.add(livro);
     }
 
-    public void removerLivro(Livro livro){
-        if (listaLivros.remove(livro)) {
-            System.out.println("Livro removido com sucesso!");
-        } else {
-            System.out.println("Erro: Este livro não existe na biblioteca.");
+    public static class Biblioteca{
+        private ArrayList<Livro> listaLivros = new ArrayList<>();
+
+        public void adicionarLivro(Livro livro){
+            listaLivros.add(livro);
         }
-    }
 
-    public void emprestarLivro(Livro livro){
-        if (listaLivros.contains(livro)) {
-            System.out.println("Livro emprestado com sucesso!");
-            livro.setDisponivel();
-        } else {
-            System.out.println("Erro: Este livro não existe na biblioteca.");
+        public void removerLivro(Livro livro){
+            if (listaLivros.remove(livro)) {
+                System.out.println("Livro removido com sucesso!");
+            } else {
+                System.out.println("Erro: Este livro não existe na biblioteca.");
+            }
         }
-    }
-    public void listarLivros(){
-        if(listaLivros.isEmpty()){
-            System.out.println("Sem livros na biblioteca!");
-        }else{
-            for(Livro l: listaLivros){
-                System.out.println("Livro: " + l.verInfo());
+
+        public void emprestarLivro(Livro livro){
+            if (listaLivros.contains(livro)) {
+                System.out.println("Livro emprestado com sucesso!");
+                livro.setDisponivel();
+            } else {
+                System.out.println("Erro: Este livro não existe na biblioteca.");
+            }
+        }
+        public void listarLivros(){
+            if(listaLivros.isEmpty()){
+                System.out.println("Sem livros na biblioteca!");
+            }else{
+                for(Livro l: listaLivros){
+                    System.out.println("Livro: " + l.verInfo());
+                }
             }
         }
     }
-}
-
-public class Bibliotev {
     public static void main(String[] args) {
         Biblioteca biblio = new Biblioteca();
         Livro l1 = new Livro("Dom Casmurro", "Machado de Assis");
