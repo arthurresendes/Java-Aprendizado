@@ -17,7 +17,9 @@ public class Pedido {
         return valor;
     }
 
-    public void setValor(double newValue){
-        this.valor = newValue;
+    public void setValor(String nameAdmin,double newValue){
+        if(nameAdmin == "Arthur"){
+            this.valor = newValue;
+        }
     }
 }
