@@ -17,6 +17,8 @@ public class Notas {
         media = (nota1+nota2)/2.0;
         if(media > 6.0){
             System.out.println("Parabens voce passou com: " + media);
+        }else if(media == 6.0){
+            System.out.println("Passou com média 6.");
         }else{
             System.out.println("Reprovado!!!!");
         }
