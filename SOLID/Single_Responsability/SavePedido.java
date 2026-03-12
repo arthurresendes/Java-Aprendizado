@@ -1,4 +1,4 @@
-package SOLID.Single_Responsability;
+package Single_Responsability;
 
 public class SavePedido {
     public void salvar(Pedido pedido) {

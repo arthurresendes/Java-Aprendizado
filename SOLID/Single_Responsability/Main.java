@@ -1,5 +1,4 @@
-package SOLID.Single_Responsability;
-
+package Single_Responsability;
 public class Main {
     public static void main(String[] args) {
         Pedido pedido = new Pedido("Arthur", 1500);

@@ -1,4 +1,4 @@
-package SOLID.Single_Responsability;
+package Single_Responsability;
 
 public class PedidoService {
     public double calcularDesconto(Pedido pedido) {
