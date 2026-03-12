@@ -11,7 +11,6 @@ public class TesteLSP {
 		
 		Vendedor f3 = new Vendedor("Matheus", 10000f);
 		imprimir(f3);
-
 	}
 
 	private static void imprimir(Funcionario f1) {
