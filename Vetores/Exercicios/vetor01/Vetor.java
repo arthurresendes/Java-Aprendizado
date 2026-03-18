@@ -12,8 +12,10 @@ public class Vetor {
     }
 
     public void getNumbers(double[] vetor, int tamanho){
-        for(int i = 0; i < tamanho; i++){
-            System.out.println("[ " + i + " ] : " + vetor[i]);
+        int i = 1;
+        for(double d: vetor){
+            System.out.println("[ " + i + " ] : " + d);
+            i+=1;
         }
     }
 
