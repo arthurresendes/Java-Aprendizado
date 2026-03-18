@@ -11,7 +11,6 @@ public class Loop {
             num = sc.nextInt();
         }
         sc.close();
-
         return num;
     }
 
