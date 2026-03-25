@@ -23,5 +23,13 @@ public class Main {
         //System.out.println(lista.contains());
         System.out.println("Lista esta vazia: " + lista.isEmpty());
 
+        lista.remove(1);
+
+        System.out.println(lista.get(0));
+
+        lista.clear();
+
+        System.out.println("Lista esta vazia: " + lista.isEmpty());
+
     }
 }
