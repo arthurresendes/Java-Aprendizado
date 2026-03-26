@@ -6,7 +6,9 @@ public class Main {
         RelatorioService relatorio = new RelatorioService();
 
         repo.adicionar(new Livro("Clean Code", 100.0f, "VIP"));
+        repo.salvarBanco();
         repo.adicionar(new Livro("Design Patterns", 150.0f, "Normal"));
+        repo.salvarBanco();
 
         
         relatorio.imprimir(repo.buscarTodos());
