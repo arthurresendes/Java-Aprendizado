@@ -10,7 +10,6 @@ public class Main {
         repo.adicionar(new Livro("Design Patterns", 150.0f, "Normal"));
         repo.salvarBanco();
 
-        
         relatorio.imprimir(repo.buscarTodos());
 
         Desconto descontos = new DescontoVIP();
