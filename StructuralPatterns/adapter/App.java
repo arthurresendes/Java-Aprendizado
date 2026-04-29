@@ -1,5 +1,4 @@
 package adapter;
-
 public class App {
 	public static void main(String[] args) {
 		Advertisement adv1 = new Advertisement();
