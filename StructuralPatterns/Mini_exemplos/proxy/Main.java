@@ -1,0 +1,7 @@
+public class Main {
+    public static void main(String[] args) {
+        App ap = new App();
+        ap.baixarImagem();
+        ap.jogar();
+    }
+}
