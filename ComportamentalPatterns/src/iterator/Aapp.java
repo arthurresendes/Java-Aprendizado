@@ -16,5 +16,11 @@ public class Aapp {
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
+		
+		var file = new GetFiles("c:\\Users\\Aluno\\Downloads");
+		var f = file.iterator();
+		while(f.hasNext()) {
+			System.out.println(f.next());;
+		}
 	}
 }
