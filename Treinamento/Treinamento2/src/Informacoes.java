@@ -1,3 +1,3 @@
 public interface Informacoes {
-    String retonarMensagem();
+    String retonarMensagem(Pessoa p);
 }

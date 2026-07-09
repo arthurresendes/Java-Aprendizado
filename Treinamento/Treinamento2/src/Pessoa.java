@@ -1,4 +1,4 @@
-public class Pessoa implements  Informacoes{
+public class Pessoa{
     private final String nome;
     private final int idade;
 
@@ -7,8 +7,11 @@ public class Pessoa implements  Informacoes{
         this.idade = atual - nascimento;
     }
 
-    @Override
-    public String retonarMensagem(){
-        return "Olá " + nome + " você tem " + idade + " anos";
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
     }
 }
