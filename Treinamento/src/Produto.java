@@ -12,4 +12,12 @@ public class Produto {
     public String getName() {
         return name;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQtd() {
+        return qtd;
+    }
 }
