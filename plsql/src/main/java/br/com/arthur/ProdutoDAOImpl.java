@@ -82,4 +82,28 @@ public class ProdutoDAOImpl implements Methods {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void cadastrarProd(String nome, Double price, Integer qtd,Boolean disponivel ,Integer id_importadora){
+        String sql = "{ call cadastrar_prod(?,?,?,?,?) }";
+
+        try (
+                Connection conn = ConnectionFactory.getConnection();
+                CallableStatement cs = conn.prepareCall(sql)
+        ) {
+
+            cs.setString(1, nome);
+            cs.setDouble(2, price);
+            cs.setInt(3, qtd);
+            cs.setBoolean(4, disponivel);
+            cs.setInt(5, id_importadora);
+
+            cs.execute();
+
+            System.out.println("Produto cadastrado com sucesso!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

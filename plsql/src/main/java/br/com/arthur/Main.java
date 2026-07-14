@@ -16,8 +16,10 @@ public class Main {
 
         System.out.println("===== PROCEDURE =====");
 
-        dao.cadastrarImportadora("Pepsi");
+        dao.cadastrarImportadora("Fanta");
+        System.out.println();
 
+        dao.cadastrarProd("Fanta Uva", 9.99, 50, true, 4);
         System.out.println();
 
         System.out.println("===== FUNCTION =====");

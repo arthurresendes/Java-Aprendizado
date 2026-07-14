@@ -50,11 +50,10 @@ public class ProdutoImportadora {
 
     @Override
     public String toString() {
-        return "ProdutoImportadora{" +
-                "nameProd='" + nameProd + '\'' +
-                ", price=" + price +
-                ", qtd=" + qtd +
-                ", nameImp='" + nameImp + '\'' +
-                '}';
+        return "ProdutoImportadora: " +
+                "Nome do produto='" + nameProd + '\'' +
+                ", Preço=" + price +
+                ", Quantidade=" + qtd +
+                ", Empresa='" + nameImp + '\'';
     }
 }
