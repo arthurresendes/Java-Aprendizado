@@ -19,7 +19,7 @@ public class Main {
         dao.cadastrarImportadora("Fanta");
         System.out.println();
 
-        dao.cadastrarProd("Fanta Uva", 9.99, 50, true, 4);
+        dao.cadastrarProd("Fanta Laranja", 9.99, 80, true, 4);
         System.out.println();
 
         System.out.println("===== FUNCTION =====");
@@ -28,5 +28,10 @@ public class Main {
 
         System.out.println("Preço original: R$100.00");
         System.out.println("Preço com desconto: R$" + desconto);
+
+        Double valorBruto = dao.calcularValorBruto(213.99,67);
+        System.out.println("Preço original: R$213.99\nQuantidade no estoque: 67");
+        System.out.println("Valor bruto na venda de todos produtos: " + valorBruto);
+
     }
 }

@@ -63,6 +63,34 @@ public class ProdutoDAOImpl implements Methods {
     }
 
     @Override
+    public Double calcularValorBruto(Double preco, Integer qtd) {
+
+        String sql = "{ ? = call calcular_valor_bruto_venda(?,?) }";
+        if (preco == null || qtd == null) {
+            return 0.0;
+        }
+
+        try (
+                Connection conn = ConnectionFactory.getConnection();
+                CallableStatement cs = conn.prepareCall(sql)
+        ) {
+
+            cs.registerOutParameter(1, Types.DECIMAL);
+            cs.setDouble(2, preco);
+            cs.setInt(3, qtd);
+
+            cs.execute();
+
+            return cs.getDouble(1);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
     public void cadastrarImportadora(String nome) {
 
         String sql = "{ call cadastrar_importadora(?) }";
