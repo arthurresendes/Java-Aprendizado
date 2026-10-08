@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // Construtor com todos os campos
 @NoArgsConstructor // Construtor vazio com os campos null
 public class UserResponse {
+    private Long id;
     private String name;
     private String email;
 }

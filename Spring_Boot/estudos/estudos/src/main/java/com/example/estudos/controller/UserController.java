@@ -29,9 +29,14 @@ public class UserController {
         return userService.listagem();
     }
 
-    @DeleteMapping("/{nome}")
-    public ResponseEntity<Void> deletando(@PathVariable String nome){
-        userService.deletarUser(nome);
+    @GetMapping("/{email}")
+    public List<UserResponse> buscarPorEmail(@PathVariable String email){
+        return userService.listagemPorEmail(email);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletando(@PathVariable Long id){
+        userService.deletarUser(id);
         return ResponseEntity.noContent().build();
     }
 
