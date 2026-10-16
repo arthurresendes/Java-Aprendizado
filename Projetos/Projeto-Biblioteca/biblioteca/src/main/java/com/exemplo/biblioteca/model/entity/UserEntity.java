@@ -23,4 +23,9 @@ public class UserEntity {
 
     @Column(nullable = false)
     private String email;
+
+    public UserEntity(String nome, String email){
+        this.nome = nome;
+        this.email = email;
+    }
 }

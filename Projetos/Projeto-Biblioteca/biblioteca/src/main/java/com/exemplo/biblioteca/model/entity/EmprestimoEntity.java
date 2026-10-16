@@ -14,7 +14,6 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class EmprestimoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,12 +25,18 @@ public class EmprestimoEntity {
     @Column(nullable = true)
     private LocalDate dataDevolucao;
 
-
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "livro_id")
     private LivroEntity livro;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
-    private  UserEntity user;
+    private UserEntity user;
+
+    public EmprestimoEntity(LocalDate dataEmprestimo, LocalDate dataPrevistaDevolucao, LivroEntity livro, UserEntity user){
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataPrevistaDevolucao = dataPrevistaDevolucao;
+        this.livro = livro;
+        this.user = user;
+    }
 }

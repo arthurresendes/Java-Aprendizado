@@ -6,9 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "livros")
@@ -23,18 +22,25 @@ public class LivroEntity {
 
     private String titulo;
     private String isbn;
-    private LocalDate anoPublicacao;
+    private Integer anoPublicacao;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "autor_id")
     private AutorEntity autor;
 
     @ManyToMany
     @JoinTable(
-            name = "categoria_livro",
-            joinColumns = @JoinColumn(name = "livro_id"),
-            inverseJoinColumns = @JoinColumn(name = "categoria_id")
+            name = "livro_categoria",
+            joinColumns = @JoinColumn(name = "livro_id"), // Aponta para essa entity
+            inverseJoinColumns = @JoinColumn(name = "categoria_id") // Aponta para entity de categoria
     )
-    private List<CategoriaEntity> categoria;
+    private Set<CategoriaEntity> categorias = new HashSet<>();
+
+    public LivroEntity(String titulo, String isbn, Integer anoPublicacao, AutorEntity autor) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.anoPublicacao = anoPublicacao;
+        this.autor = autor;
+    }
 
 }

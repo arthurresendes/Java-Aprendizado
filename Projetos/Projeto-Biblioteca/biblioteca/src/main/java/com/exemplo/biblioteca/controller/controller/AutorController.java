@@ -4,6 +4,7 @@ import com.exemplo.biblioteca.model.service.AutorService;
 import com.exemplo.biblioteca.view.dto.AutorCreateRequest;
 import com.exemplo.biblioteca.view.dto.AutorResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class AutorController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletarPorId(@PathVariable  Long id){
         autorService.deletePorId(id);
     }

@@ -1,8 +1,8 @@
 package com.exemplo.biblioteca.view.dto;
 
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 public record AutorCreateRequest(
-        @NotNull String nome,
-        @NotNull String nacionalidade
+        @NotBlank String nome,
+        @NotBlank String nacionalidade
 ){}

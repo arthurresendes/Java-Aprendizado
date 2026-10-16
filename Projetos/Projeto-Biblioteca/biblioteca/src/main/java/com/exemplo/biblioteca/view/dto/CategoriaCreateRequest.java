@@ -1,8 +1,9 @@
 package com.exemplo.biblioteca.view.dto;
 
-import org.antlr.v4.runtime.misc.NotNull;
+
+import jakarta.validation.constraints.NotBlank;
 
 public record CategoriaCreateRequest(
-        @NotNull String nome
+        @NotBlank String nome
 ) {
 }
