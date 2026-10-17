@@ -72,6 +72,8 @@ O projeto está dividido em várias pastas, cada uma cobrindo um tópico especí
 - `plsql/`  
   Diretório com conteúdo relacionado a PL/SQL.
 
+- `Projetos/Projeto-Biblioteca`  
+  Diretório com conhecimento Spring boot com ligações N - N, 1 - N.
 ---
 
 ## 🧠 Conceitos abordados no repositório
