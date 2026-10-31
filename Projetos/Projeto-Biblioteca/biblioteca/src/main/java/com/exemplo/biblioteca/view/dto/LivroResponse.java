@@ -18,6 +18,7 @@ public class LivroResponse {
     private String autorNome;
     private Set<CategoriaResumo> categorias;
 
+    // Construtor especifico para pegar o id e  nome da categoria resumo
     @Data
     @NoArgsConstructor
     @AllArgsConstructor

@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface EmprestimoRepository extends JpaRepository<EmprestimoEntity, Long> {
-    @EntityGraph(attributePaths = {"livro", "user"})
+    @EntityGraph(attributePaths = {"livro","livro.autor", "user"}) // carrega o relacionamento livro, autor(indo do livro) e user
     List<EmprestimoEntity> findAll();
 }

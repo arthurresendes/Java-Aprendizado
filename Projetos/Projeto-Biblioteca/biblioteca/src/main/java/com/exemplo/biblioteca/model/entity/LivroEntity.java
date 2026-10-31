@@ -1,7 +1,6 @@
 package com.exemplo.biblioteca.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,13 +13,15 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class LivroEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String titulo;
+
+    @Column(nullable = false, unique = true)
     private String isbn;
     private Integer anoPublicacao;
 
@@ -28,6 +29,7 @@ public class LivroEntity {
     @JoinColumn(name = "autor_id")
     private AutorEntity autor;
 
+    // Ligação N - N
     @ManyToMany
     @JoinTable(
             name = "livro_categoria",

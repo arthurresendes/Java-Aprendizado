@@ -16,6 +16,7 @@ public class EmprestimoResponse {
     private LocalDate dataDevolucao;
     private Long livroId;
     private String nomeLivro;
+    private String nomeAutor;
     private Long userId;
     private String userNome;
 }

@@ -1,13 +1,10 @@
 package com.exemplo.biblioteca.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "emprestimo")
@@ -22,9 +19,11 @@ public class EmprestimoEntity {
     private LocalDate dataEmprestimo;
     private LocalDate dataPrevistaDevolucao;
 
+    //  Pode receber valor null
     @Column(nullable = true)
     private LocalDate dataDevolucao;
 
+    // Ligação N - 1
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "livro_id")
     private LivroEntity livro;

@@ -10,6 +10,6 @@ public record LivroCreateRequest(
         @NotBlank String isbn,
         @NotNull Integer anoPublicacao,
         @NotNull Long autorId,
-        Set<Long> categoriasIds
+        Set<Long> categoriasIds // []
 ) {
 }
