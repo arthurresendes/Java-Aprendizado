@@ -1,5 +1,6 @@
 package com.exemplo.biblioteca.model.service;
 
+import com.exemplo.biblioteca.model.ResourceNotFoundException;
 import com.exemplo.biblioteca.model.entity.UserEntity;
 import com.exemplo.biblioteca.model.repository.UserRepository;
 import com.exemplo.biblioteca.view.dto.UserCreateRequest;
@@ -25,6 +26,17 @@ public class UserService {
         UserEntity user = new UserEntity(request.nome(),request.email());
         UserEntity salvar = userRepository.save(user);
         return new UserResponse(salvar.getId(), salvar.getNome(), salvar.getEmail());
+    }
+
+    @Transactional
+    public UserResponse atualizarUser(Long id, UserCreateRequest userR){
+        UserEntity usuarioExistente = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o ID: " + id));
+
+        usuarioExistente.setNome(userR.nome());
+        usuarioExistente.setEmail(userR.email());
+
+        return new UserResponse(id,userR.nome(), userR.email());
     }
 
     @Transactional
