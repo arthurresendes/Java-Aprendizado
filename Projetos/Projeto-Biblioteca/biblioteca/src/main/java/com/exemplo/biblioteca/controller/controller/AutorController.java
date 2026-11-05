@@ -33,6 +33,10 @@ public class AutorController {
         return autorService.cadastroAutor(req);
     }
 
+    // Atualizar por ID
+    @PutMapping("/{id}")
+    public AutorResponse atualizar(@PathVariable Long id, @RequestBody AutorCreateRequest req){ return autorService.atualizarAutor(id, req);}
+
     // Rota DELETE por id
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

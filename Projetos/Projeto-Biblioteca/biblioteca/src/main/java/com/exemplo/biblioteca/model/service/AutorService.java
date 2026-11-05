@@ -1,6 +1,7 @@
 package com.exemplo.biblioteca.model.service;
 
 
+import com.exemplo.biblioteca.model.ResourceNotFoundException;
 import com.exemplo.biblioteca.model.entity.AutorEntity;
 import com.exemplo.biblioteca.model.repository.AutorRepository;
 import com.exemplo.biblioteca.view.dto.AutorCreateRequest;
@@ -34,6 +35,15 @@ public class AutorService {
         AutorEntity aut = new AutorEntity(req.nome(), req.nacionalidade());
         AutorEntity salvar = autorRepository.save(aut);
         return new AutorResponse(salvar.getId(), salvar.getNome(), salvar.getNacionalidade());
+    }
+
+    @Transactional
+    public AutorResponse atualizarAutor(Long id, AutorCreateRequest autorR){
+        AutorEntity autorAtualizar = autorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Autor não encontrado com o ID: " + id));
+
+        autorAtualizar.setNome(autorR.nome());
+        autorAtualizar.setNacionalidade(autorR.nacionalidade());
+        return new AutorResponse(id, autorR.nome(), autorR.nacionalidade());
     }
 
     @Transactional
