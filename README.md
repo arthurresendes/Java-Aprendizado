@@ -1,158 +1,427 @@
 # ☕ Java-Aprendizado
 
-Este repositório é um conjunto de exercícios, exemplos e estudos práticos em Java, organizado por temas que vão desde os fundamentos da linguagem até conceitos mais avançados de orientação a objetos, padrões de projeto e boas práticas de desenvolvimento.
+Repositório de estudos, exercícios, práticas e projetos em Java, organizado por temas para facilitar o aprendizado progressivo da linguagem e dos conceitos mais importantes da programação orientada a objetos, padrões de projeto, arquitetura e desenvolvimento com Spring Boot.
 
-A ideia aqui é simples: aprender Java construindo exemplos e exercitando os conceitos com código real.
+O objetivo principal deste projeto é consolidar conhecimento por meio de exemplos práticos, pequenos programas, exercícios de lógica e projetos reais, com foco em aprendizagem aplicada e revisão constante.
 
 ---
 
-## 📚 O que está presente neste repositório
+## 📌 Visão geral
 
-O projeto está dividido em várias pastas, cada uma cobrindo um tópico específico:
+Este repositório reúne conteúdos de diferentes níveis de estudo, desde Java básico até temas mais avançados, incluindo:
 
-- `Basico/`  
-  Conteúdo inicial de Java, com exemplos básicos e introdução ao ambiente da linguagem.
+- Sintaxe e fundamentos da linguagem
+- Estruturas condicionais
+- Laços de repetição
+- Arrays e matrizes
+- Ordenação
+- Programação orientada a objetos
+- Herança, encapsulamento e polimorfismo
+- Princípios SOLID
+- Design patterns criacionais, estruturais e comportamentais
+- Spring Boot
+- APIs REST
+- Persistência e conexão com banco de dados
+- Exercícios e mini projetos
 
-- `Sequencial/`  
-  Exercícios e exemplos relacionados a instruções sequenciais, variáveis e execução linear do código.
+A organização do repositório foi feita por pastas temáticas para facilitar a navegação e o estudo individual.
 
-- `Condicionais/`  
-  Contém estudo de estruturas condicionais como `if`, `else`, `else if` e decisões lógicas.
-
-- `Loop/`  
-  Exemplos com laços de repetição, como `for`, `while` e `do while`.
-
-- `Vetores/`  
-  Trabalha com arrays unidimensionais, acesso por índice e manipulação de dados em sequência.
-
-- `Matrizes/`  
-  Conteúdo sobre arrays bidimensionais, muito úteis para matrizes e representação tabular de dados.
-
-- `Ordenacao/`  
-  Exercícios de ordenação e lógica de manipulação de dados em vetores.
-
-- `POO/`  
-  Diretório voltado para Programação Orientada a Objetos, com classes, objetos, atributos e métodos.
-
-- `Pilares/`  
-  Foca nos pilares da POO, que são base para a modelagem de sistemas em Java.
-
-- `SOLID/`  
-  Exemplos e exercícios sobre os princípios de design orientado a objetos:
-  - Single Responsibility
-  - Open/Closed
-  - Liskov Substitution
-  - Interface Segregation
-  - Dependency Inversion
-
-- `CreationalPatterns/`  
-  Estudo de padrões de criação, usados para facilitar a construção de objetos.
-
-- `StructuralPatterns/`  
-  Exemplos de padrões estruturais, que organizam e conectam classes e objetos.
-
-- `ComportamentalPatterns/`  
-  Padrões focados no comportamento de objetos e na comunicação entre eles.
-
-- `Executavel/`  
-  Estrutura para exemplos e classes executáveis do projeto.
-
-- `Lista/`  
-  Conteúdo relacionado a listas e manipulação de coleções em Java.
-
-- `Treinamento/`  
-  Diretório usado para exercícios e material de estudo.
-
-- `Spring_Boot/`  
-  Contém exemplos ou projetos base com Spring Boot.
-
-- `Stock/`  
-  Projeto ou estudo prático relacionado a gestão de estoque.
-
-- `plsql/`  
-  Diretório com conteúdo relacionado a PL/SQL.
-
-- `Projetos/Projeto-Biblioteca`  
-  Diretório com conhecimento Spring boot com ligações N - N, 1 - N.
 ---
 
-## 🧠 Conceitos abordados no repositório
+## 🗂️ Estrutura do repositório
 
-### 1. Variáveis e tipos
-Em Java, variáveis são usadas para armazenar dados. Elas possuem tipos, como:
-- `int`
-- `double`
-- `boolean`
-- `String`
+Abaixo está uma visão geral de cada diretório e o que ele representa:
 
-Esses tipos definem o tipo de informação que a variável pode guardar.
+### 1. `Basico/`
+Contém exercícios introdutórios e exemplos básicos da linguagem Java.
 
-### 2. Estruturas sequenciais
-São instruções executadas em ordem, uma após a outra. Esse é o ponto de partida para qualquer programa Java.
+Inclui:
+- primeiros programas
+- estrutura de classes e métodos
+- uso de `main`
+- conceitos iniciais de compilação e execução
 
-### 3. Condicionais
-A lógica condicional permite que o programa tome decisões com base em valores, por exemplo:
-- verificar se um número é maior que outro;
-- decidir entre duas ações;
-- controlar o fluxo do programa.
+Exemplos:
+- `helloWorld.java`
+- `Exercicios/`
 
-Exemplos: `if`, `else`, `switch`.
+---
 
-### 4. Laços de repetição
-Loops permitem repetir uma instrução várias vezes sem escrever o mesmo código manualmente.
+### 2. `Sequencial/`
+Diretório dedicado a programas que executam instruções em sequência.
 
-Principais exemplos:
+Contém:
+- lógica linear
+- entradas e saídas simples
+- manipulação de dados em fluxo direto
+- exercícios de processamento básico
+
+Subpastas:
+- `Dados/`
+- `Conta/`
+
+---
+
+### 3. `Condicionais/`
+Estuda a tomada de decisão por meio de condições lógicas.
+
+Conteúdo:
+- `if`
+- `else`
+- `else if`
+- comparações
+- estruturas lógicas com operadores booleanos
+
+Exemplo:
+- `Se/Menor.java`
+- `Notas.java`
+
+---
+
+### 4. `Loop/`
+Área dedicada aos laços de repetição.
+
+Inclui:
 - `for`
 - `while`
-- `do while`
+- exercícios com contadores
+- tabuada e iteração de listas
 
-### 5. Vetores e matrizes
-Vetores armazenam valores em sequência, e matrizes representam tabelas ou estruturas bidimensionais.
-
-São úteis para:
-- guardar listas de nomes;
-- processar notas;
-- organizar dados em tabela.
-
-### 6. Ordenação
-A ordenação é usada para organizar elementos em ordem crescente ou decrescente. Esse tema aparece em algoritmos e exercícios práticos.
-
-### 7. Programação Orientada a Objetos (POO)
-A POO é um dos pilares centrais do Java. Ela organiza o código em:
-- classes
-- objetos
-- atributos
-- métodos
-
-Ela ajuda a representar problemas reais de forma mais organizada e reutilizável.
-
-### 8. Encapsulamento
-Encapsulamento é a ideia de proteger o estado de um objeto e controlar o acesso aos seus dados por meio de métodos.
-
-### 9. Herança
-Herança permite que uma classe receba características de outra classe, reutilizando código e organizando melhor a estrutura do sistema.
-
-### 10. Polimorfismo
-Polimorfismo permite que objetos de diferentes classes sejam tratados de maneira semelhante quando compartilham uma mesma interface ou classe base.
-
-### 11. SOLID
-Os princípios SOLID ajudam a escrever software mais organizado, flexível e fácil de manter.
-
-Eles representam boas práticas de design e ajudam na criação de sistemas mais escaláveis.
-
-### 12. Design Patterns
-Padrões de projeto são soluções reutilizáveis para problemas recorrentes no desenvolvimento de software.
-
-No repositório, há exemplos de:
-- padrões criacionais;
-- padrões estruturais;
-- padrões comportamentais.
+Subpastas:
+- `For/`
+- `While/`
+- `Exercicios/`
 
 ---
 
-## 🛠️ Como usar este repositório
+### 5. `Vetores/`
+Trabalha com arrays unidimensionais.
 
-Para executar um exemplo em Java, normalmente basta compilar e rodar o arquivo `.java` com o comando:
+Conteúdo:
+- armazenamento de valores em sequência
+- acesso por índice
+- leitura e manipulação de dados em vetor
+- exercícios práticos
+
+Arquivos importantes:
+- `Basico.java`
+- `Exercicios/vetor01/`
+
+---
+
+### 6. `Matrizes/`
+Estuda estrutura de dados bidimensionais.
+
+Conteúdo:
+- matrizes
+- acesso por linha e coluna
+- processamento de dados em tabela
+- exercícios com representação tabular
+
+Arquivos:
+- `Matrizes.java`
+- `Exercicios/matriz01/`
+
+---
+
+### 7. `Ordenacao/`
+Agrupa exemplos e exercícios sobre ordenação de elementos.
+
+Conteúdo:
+- lógica de ordenação
+- implementação de algoritmos simples
+- manipulação de listas e vetores
+
+Exemplo:
+- `SelectionSort.java`
+
+---
+
+### 8. `POO/`
+Diretório voltado para Programação Orientada a Objetos.
+
+Inclui:
+- classes
+- atributos
+- métodos
+- objetos
+- encapsulamento básico
+- associação entre entidades
+
+Arquivos e exemplos:
+- `Produto.java`
+- `automovel.java`
+- `animal.java`
+- `Bibliotev.java`
+- `Medias_Aluno/`
+
+---
+
+### 9. `Pilares/`
+Foca nos pilares da programação orientada a objetos.
+
+Conceitos abordados:
+- encapsulamento
+- herança
+- polimorfismo
+- abstração
+
+Conteúdo:
+- exemplos com herança e relacionamento entre classes
+- práticas de modelagem orientada a objetos
+
+---
+
+### 10. `SOLID/`
+Diretório que reúne exemplos e mini exercícios sobre os princípios SOLID.
+
+Principais tópicos:
+- Single Responsibility Principle
+- Open/Closed Principle
+- Liskov Substitution Principle
+- Interface Segregation Principle
+- Dependency Inversion Principle
+
+Subestruturas:
+- `Single_Responsability/`
+- `ocp/`
+- `lsp/`
+- `isp/`
+- `dip/`
+- `Mini_Exemplo/`
+- `Exercicio/`
+
+Este diretório é essencial para quem quer aprender design orientado a objetos e boas práticas de arquitetura.
+
+---
+
+### 11. `CreationalPatterns/`
+Envolve padrões de criação, usados para construir objetos de maneira mais flexível e organizada.
+
+Padrões estudados:
+- Factory Method
+- Abstract Factory
+- Singleton
+- Prototype
+- Builder
+
+Estrutura:
+- `src/`
+- `Problem/`
+
+Esses padrões ajudam a reduzir acoplamento e melhorar a reutilização do código.
+
+---
+
+### 12. `StructuralPatterns/`
+Padrões estruturais, que organizam o relacionamento entre classes e objetos.
+
+Conteúdo:
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+Também há exemplos e mini implementações em:
+- `Mini_exemplos/`
+
+---
+
+### 13. `ComportamentalPatterns/`
+Padrões comportamentais focados em como os objetos interagem e como a lógica de comportamento é organizada.
+
+Padrões presentes:
+- Chain of Responsibility
+- Command
+- Iterator
+- Observer
+- Strategy
+
+Arquivos:
+- `Pratica/`
+- `src/`
+
+Esses padrões são muito úteis para desenvolver aplicações modulares e fáceis de manter.
+
+---
+
+### 14. `Executavel/`
+Contém exemplos executáveis e páginas simples de demonstração.
+
+Inclui:
+- uma aplicação web básica em JavaScript
+- arquivos HTML/JS
+- ambiente para rodar pequenos projetos front-end simples
+
+Estrutura:
+- `todo/`
+
+---
+
+### 15. `Lista/`
+Reúne exercícios e estudos relacionados a listas e coleções.
+
+Conteúdo:
+- manipulação de listas
+- organização de elementos
+- exemplos com estruturas lineares
+
+Pastas:
+- `Aprendizado/`
+- `SOLID/`
+
+---
+
+### 16. `Treinamento/`
+Diretório utilizado para prática geral, treinamento e resolução de exercícios.
+
+Conteúdo:
+- classes simples
+- métodos
+- exemplos de lógica de programação
+- práticas de estudo
+
+---
+
+### 17. `Spring_Boot/`
+Um dos diretórios mais importantes do repositório, contendo projetos com Spring Boot.
+
+Subpastas:
+- `ai/`
+- `estudos/`
+- `todolist/`
+
+Essas pastas demonstram:
+- criação de APIs REST
+- uso de controllers
+- DTOs
+- entidades
+- repositories
+- services
+- estrutura MVC
+- integração com Maven
+
+---
+
+### 18. `Stock/`
+Projeto relacionado a gestão de estoque.
+
+Estrutura típica:
+- model
+- controller
+- service
+- repository
+- configuração do Spring Boot
+- arquivos `application.properties` / `application.yml`
+
+Esse projeto funciona como um exemplo de CRUD conceitual com foco em um domínio real.
+
+---
+
+### 19. `Projetos/`
+Contém projetos mais completos e estruturados.
+
+#### `Projetos/Projeto-Biblioteca`
+Projeto de biblioteca em Spring Boot com modelagem de domínio mais elaborada.
+
+Possíveis elementos:
+- autores
+- livros
+- categorias
+- empréstimos
+- usuários
+- DTOs
+- serviços
+- repositories
+- controllers
+- exceções personalizadas
+
+Isso demonstra um projeto mais próximo do mundo real, com arquitetura bem organizada.
+
+---
+
+### 20. `plsql/`
+Diretório focado em PL/SQL e acesso a banco de dados.
+
+Conteúdo:
+- conexão com banco
+- DAO/Repository
+- operações de manipulação de dados
+- exemplos de consulta e persistência
+
+---
+
+### 21. `.idea/` e `.vscode/`
+Arquivos de configuração do ambiente de desenvolvimento.
+
+- `.idea`: configurações do IntelliJ IDEA
+- `.vscode`: configurações do VS Code
+
+Esses arquivos não são parte do código da aplicação em si, mas ajudam no ambiente de desenvolvimento.
+
+---
+
+## 🧠 Conceitos aprendidos neste repositório
+
+Este projeto cobre uma ampla gama de conteúdos. Entre os principais aprendizados, destacam-se:
+
+### Fundamentos de Java
+- variáveis
+- tipos primitivos
+- operadores
+- entrada/saída
+- métodos
+- classes
+- objetos
+
+### Lógica de programação
+- sequências
+- decisões
+- repetição
+- manipulação de dados
+
+### Estruturas de dados
+- vetores
+- matrizes
+- listas
+- manipulação de coleções
+
+### POO
+- encapsulamento
+- herança
+- polimorfismo
+- abstração
+- relacionamento entre classes
+
+### SOLID
+- responsabilidades bem definidas
+- baixo acoplamento
+- extensibilidade
+- manutenibilidade
+
+### Padrões de projeto
+- padrões criacionais
+- padrões estruturais
+- padrões comportamentais
+
+### Spring Boot
+- criação de aplicações Java Web
+- controllers
+- services
+- repositories
+- DTOs
+- configuração de propriedades
+- criação de APIs REST
+
+---
+
+## 🚀 Como executar os exemplos
+
+### 1. Java puro
+Para compilar e rodar um arquivo `.java`, utilize:
 
 ```bash
 javac NomeDoArquivo.java
