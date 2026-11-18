@@ -11,6 +11,8 @@ import com.exemplo.biblioteca.view.dto.LivroCreateRequest;
 import com.exemplo.biblioteca.view.dto.LivroResponse;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -25,11 +27,13 @@ public class LivroService {
     private final CategoriaRepository categoriaRepository;
 
     @Transactional
+    @Cacheable(value = "livros", key = "'todos'")
     public List<LivroResponse> verTodosLivros(){
         return livroRepository.findAll().stream().map(this::toResponse).toList();
     }
 
     @Transactional
+    @CacheEvict(value = "livros", allEntries = true)
     public LivroResponse cadastrarLivro(LivroCreateRequest request){
         AutorEntity autor = autorRepository.findById(request.autorId()).
                 orElseThrow(() -> new RuntimeException("Autor não encontrado com o ID: " + request.autorId()));
@@ -49,6 +53,7 @@ public class LivroService {
     }
 
     @Transactional
+    @Cacheable(value = "livros", key = "#id")
     public LivroResponse buscarPorId(Long id){
         LivroEntity li = livroRepository.findById(id).orElseThrow(() -> new RuntimeException("ID não encontrado"));
         return toResponse(li);

@@ -1,4 +1,4 @@
-package com.exemplo.biblioteca.model;
+package com.exemplo.biblioteca.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

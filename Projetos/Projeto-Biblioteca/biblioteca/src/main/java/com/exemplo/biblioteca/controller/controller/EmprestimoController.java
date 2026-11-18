@@ -19,6 +19,9 @@ public class EmprestimoController {
         return emprestimoService.listarTodosEmprestimos();
     }
 
+    @GetMapping("/{id}")
+    public EmprestimoResponse buscarPorId(@PathVariable Long id){ return emprestimoService.listarEmprestimoPorId(id);}
+
     @PostMapping
     public EmprestimoResponse cadastrar(@RequestBody EmprestimoCreateRequest request){
         return  emprestimoService.cadastrarEmprestimo(request);
