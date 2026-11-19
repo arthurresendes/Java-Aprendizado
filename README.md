@@ -338,6 +338,7 @@ Possíveis elementos:
 - repositories
 - controllers
 - exceções personalizadas
+- cache com Caffeine
 
 Isso demonstra um projeto mais próximo do mundo real, com arquitetura bem organizada.
 
